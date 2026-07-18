@@ -1,49 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>TAJ RESORTS</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Poppins',sans-serif;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+    url("resort-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+
+/* Main Card */
+
+.card{
+
+    width:380px;
+    padding:40px 30px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,0.3);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.5);
+
+    animation:fadeIn 1s ease;
+}
+
+
+/* Logo */
+
+logo.png{
+
+    width:130px;
+    height:130px;
+
+    object-fit:contain;
+
+    background:white;
+
+    padding:10px;
+
+    border-radius:50%;
+
+    margin-bottom:20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.3);
+
+}
+
+
+/* Heading */
+
+h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:34px;
+
+    letter-spacing:3px;
+
+    color:#f6d77b;
+
+    margin-bottom:12px;
+
+}
+
+
+/* Tagline */
+
+p{
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:300;
+
+    margin-bottom:35px;
+
+    letter-spacing:1px;
+
+}
+
+
+
+/* Buttons */
+
+.button{
+
+    display:block;
+
+    width:100%;
+
+    padding:15px;
+
+    margin:16px 0;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:0.3s;
+
+}
+
+
+/* Google Maps Button */
+
+.maps{
+
+    background:white;
+
+    color:#222;
+
+}
+
+
+/* Instagram Button */
+
+.instagram{
+
+    background:
+    linear-gradient(
+    45deg,
+    #feda75,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+    );
+
+    color:white;
+
+}
+
+
+/* Hover Effect */
+
+.button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.35);
+
+}
+
+
+/* Footer */
+
+.footer{
+
+    margin-top:30px;
+
+    color:white;
+
+    font-size:14px;
+
+    opacity:0.9;
+
+}
+
+
+
+/* Animation */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* Mobile Responsive */
+
+@media(max-width:450px){
+
+    .card{
+
+        width:90%;
+
+        padding:35px 20px;
+
+    }
+
+
+    h1{
+
+        font-size:28px;
+
+    }
+
+}
+
+
+</style>
+
+</head>
+
 
 <body>
 
+
 <div class="card">
 
+
     <div class="logo">
+
         <img src="logo.png" alt="TAJ Resorts Logo">
+
     </div>
+
 
     <h1>TAJ RESORTS</h1>
 
-    <p>Luxury • Comfort • Memories</p>
+
+    <p>
+        Luxury • Comfort • Memories
+    </p>
+
+
 
     <a class="button maps"
        href="https://maps.app.goo.gl/rUtUHLLSJhymMSfg6"
        target="_blank">
+
         📍 Find Us on Google Maps
+
     </a>
+
+
 
     <a class="button instagram"
        href="https://www.instagram.com/tajresortss/"
        target="_blank">
+
         📷 Follow Us on Instagram
+
     </a>
 
+
+
     <div class="footer">
+
         Thank you for visiting ❤️
+
     </div>
 
+
 </div>
+
+
 
 </body>
 
