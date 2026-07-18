@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>TAJ RESORTS</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 
 <style>
 
@@ -17,67 +18,110 @@
     box-sizing:border-box;
 }
 
+
 body{
+
+    font-family:'Poppins',sans-serif;
+
     min-height:100vh;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    font-family:'Poppins',sans-serif;
+
 
     background:
     linear-gradient(
-        rgba(0,0,0,0.55),
-        rgba(0,0,0,0.55)
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.75)
     ),
-    url("resort-bg.jpg");
+    url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80");
+
 
     background-size:cover;
     background-position:center;
+
+    overflow:hidden;
+
 }
 
 
-/* Main Card */
+
+/* Floating Card */
 
 .card{
 
     width:380px;
-    padding:40px 30px;
+
+    padding:45px 35px;
 
     text-align:center;
 
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(15px);
 
-    border-radius:25px;
+    background:
+    rgba(255,255,255,0.12);
 
-    border:1px solid rgba(255,255,255,0.3);
+
+    backdrop-filter:blur(18px);
+
+
+    border-radius:30px;
+
+
+    border:1px solid rgba(255,255,255,.25);
+
 
     box-shadow:
-    0 20px 50px rgba(0,0,0,0.5);
 
-    animation:fadeIn 1s ease;
+    0 20px 50px rgba(0,0,0,.55);
+
+
+    animation:slideUp 1s ease;
+
+
 }
+
 
 
 /* Logo */
 
-logo.png{
+.logo{
 
-    width:130px;
-    height:130px;
-
-    object-fit:contain;
-
-    background:white;
-
-    padding:10px;
+    width:120px;
+    height:120px;
 
     border-radius:50%;
 
-    margin-bottom:20px;
+    background:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:auto;
+
+    padding:10px;
+
+    overflow:hidden;
+
+    border:4px solid rgba(255,255,255,.5);
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,0.3);
+    0 10px 30px rgba(0,0,0,.4);
+
+    animation:pulse 3s infinite;
+
+}
+
+
+.logo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    border-radius:50%;
 
 }
 
@@ -86,17 +130,27 @@ logo.png{
 
 h1{
 
+    margin-top:25px;
+
+
     font-family:'Cinzel',serif;
 
-    font-size:34px;
 
     letter-spacing:3px;
 
-    color:#f6d77b;
 
-    margin-bottom:12px;
+    color:#FFD86B;
+
+
+    font-size:34px;
+
+
+    text-shadow:
+
+    0 3px 10px rgba(0,0,0,.5);
 
 }
+
 
 
 /* Tagline */
@@ -105,13 +159,20 @@ p{
 
     color:white;
 
-    font-size:16px;
 
-    font-weight:300;
+    margin-top:12px;
+
 
     margin-bottom:35px;
 
+
+    font-size:16px;
+
+
     letter-spacing:1px;
+
+
+    font-weight:300;
 
 }
 
@@ -121,93 +182,169 @@ p{
 
 .button{
 
+
     display:block;
 
-    width:100%;
-
-    padding:15px;
-
-    margin:16px 0;
-
-    border-radius:40px;
 
     text-decoration:none;
 
-    font-size:15px;
 
-    font-weight:500;
+    padding:16px;
 
-    transition:0.3s;
+
+    margin:18px 0;
+
+
+    border-radius:50px;
+
+
+    font-size:16px;
+
+
+    font-weight:600;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    transition:.4s;
+
 
 }
 
 
-/* Google Maps Button */
 
-.maps{
+/* Button shine */
 
-    background:white;
-
-    color:#222;
-
-}
+.button::before{
 
 
-/* Instagram Button */
+    content:"";
 
-.instagram{
+
+    position:absolute;
+
+
+    top:0;
+
+
+    left:-100%;
+
+
+    width:100%;
+
+
+    height:100%;
+
 
     background:
+
     linear-gradient(
-    45deg,
-    #feda75,
-    #d62976,
-    #962fbf,
-    #4f5bd5
+    120deg,
+    transparent,
+    rgba(255,255,255,.5),
+    transparent
     );
 
-    color:white;
+
+    transition:.5s;
+
 
 }
 
 
-/* Hover Effect */
+.button:hover::before{
+
+    left:100%;
+
+}
+
 
 .button:hover{
 
     transform:translateY(-5px);
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,0.35);
+
+    0 10px 25px rgba(0,0,0,.4);
 
 }
 
 
+
+/* Google Maps */
+
+.maps{
+
+    background:
+
+    linear-gradient(
+    45deg,
+    #34A853,
+    #0F9D58
+    );
+
+
+    color:white;
+
+}
+
+
+
+/* Instagram */
+
+.instagram{
+
+
+    background:
+
+    linear-gradient(
+    45deg,
+    #833AB4,
+    #E1306C,
+    #F77737
+    );
+
+
+    color:white;
+
+}
+
+
+
 /* Footer */
+
 
 .footer{
 
     margin-top:30px;
 
-    color:white;
 
     font-size:14px;
 
-    opacity:0.9;
+
+    color:#eee;
+
+
+    opacity:.9;
 
 }
 
 
 
-/* Animation */
+/* Animations */
 
-@keyframes fadeIn{
+
+@keyframes slideUp{
 
     from{
 
         opacity:0;
 
-        transform:translateY(30px);
+        transform:translateY(40px);
 
     }
 
@@ -223,24 +360,52 @@ p{
 
 
 
-/* Mobile Responsive */
+@keyframes pulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+
+
+/* Mobile */
 
 @media(max-width:450px){
 
-    .card{
 
-        width:90%;
+.card{
 
-        padding:35px 20px;
+    width:90%;
 
-    }
+    padding:35px 25px;
+
+}
 
 
-    h1{
+h1{
 
-        font-size:28px;
+    font-size:28px;
 
-    }
+}
+
+
+.button{
+
+    font-size:15px;
+
+}
+
 
 }
 
@@ -256,51 +421,51 @@ p{
 <div class="card">
 
 
-    <div class="logo">
-
-        <img src="logo.png" alt="TAJ Resorts Logo">
-
-    </div>
+<div class="logo">
+🏨
+</div>
 
 
-    <h1>TAJ RESORTS</h1>
+<h1>
+TAJ RESORTS
+</h1>
 
 
-    <p>
-        Luxury • Comfort • Memories
-    </p>
-
-
-
-    <a class="button maps"
-       href="https://maps.app.goo.gl/rUtUHLLSJhymMSfg6"
-       target="_blank">
-
-        📍 Find Us on Google Maps
-
-    </a>
+<p>
+Luxury • Comfort • Memories
+</p>
 
 
 
-    <a class="button instagram"
-       href="https://www.instagram.com/tajresortss/"
-       target="_blank">
+<a class="button maps"
+href="https://maps.app.goo.gl/rUtUHLLSJhymMSfg6"
+target="_blank">
 
-        📷 Follow Us on Instagram
+📍 Find Us on Google Maps
 
-    </a>
+</a>
 
 
 
-    <div class="footer">
 
-        Thank you for visiting ❤️
+<a class="button instagram"
+href="https://www.instagram.com/tajresortss/"
+target="_blank">
 
-    </div>
+📷 Follow Us on Instagram
 
+</a>
+
+
+
+<div class="footer">
+
+Thank you for visiting ❤️
 
 </div>
 
+
+</div>
 
 
 </body>
